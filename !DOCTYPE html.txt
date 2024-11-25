@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대구대학교 장애 지원 봉사 홈페이지</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>대구대학교 장애 지원 봉사 홈페이지</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#login">로그인</a></li>
+                <li><a href="#profile">프로필</a></li>
+                <li><a href="#board">게시판</a></li>
+                <li><a href="#search">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>홈페이지 소개</h2>
+        <p>대구대학교 장애 지원 봉사 홈페이지입니다. 장애 학우들에게 도움을 주고, 봉사 시간을 인증받을 수 있습니다.</p>
+    </section>
+
+    <section id="login">
+        <h2>로그인</h2>
+        <form action="#" method="POST">
+            <label for="studentId">학번:</label>
+            <input type="text" id="studentId" name="studentId" required>
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">로그인</button>
+        </form>
+    </section>
+
+    <section id="profile">
+        <h2>프로필 작성</h2>
+        <form action="#" method="POST">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="volunteerType">봉사자 / 장애학생:</label>
+            <select id="volunteerType" name="volunteerType">
+                <option value="volunteer">봉사자</option>
+                <option value="disabled">장애학생</option>
+            </select>
+            <label for="details">추가 정보:</label>
+            <textarea id="details" name="details"></textarea>
+            <button type="submit">프로필 저장</button>
+        </form>
+    </section>
+
+    <section id="board">
+        <h2>게시판</h2>
+        <div class="board-item">
+            <h3>장애 학생을 위한 봉사 모집</h3>
+            <p>봉사자가 필요합니다. 관심 있는 분은 연락주세요!</p>
+        </div>
+        <button>새 게시글 작성</button>
+    </section>
+
+    <section id="search">
+        <h2>봉사자 검색</h2>
+        <label for="searchCategory">장애 유형 검색:</label>
+        <select id="searchCategory" name="searchCategory">
+            <option value="visual">시각장애</option>
+            <option value="hearing">청각장애</option>
+            <option value="mobility">이동장애</option>
+            <option value="etc">기타</option>
+        </select>
+        <button type="button">검색</button>
+    </section>
+
+    <footer>
+        <p>대구대학교 장애 지원 봉사 홈페이지</p>
+    </footer>
+</body>
+</html>
+
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f7f2;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
